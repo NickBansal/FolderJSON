@@ -1,9 +1,12 @@
 import React from 'react'
+import '../Stylesheets/FilterForm.css'
 
-const FilterForm = () => {
+const FilterForm = ({ handleSubmit }) => {
     return (
         <div>
-            <form>
+            <form onSubmit={(e) => {
+                e.preventDefault()
+                handleSubmit(e.target[0].value)}}>
                 <input type='text' placeholder='Filter...' />
             </form>
         </div>

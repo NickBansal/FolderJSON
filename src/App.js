@@ -10,17 +10,20 @@ class App extends Component {
     element: 0,
     toggleInformation: false,
     sortValue: '',
-    columnReverse: false
+    columnReverse: false,
+    filter: ''
   }
 
   render() {
-    const { folderItemElement, toggleInformation, sortValue, columnReverse } = this.state
+    const { folderItemElement, toggleInformation, sortValue, columnReverse, filter } = this.state
     return (
       <div className="App">
         <SortButtons 
         sortFolders={this.sortFolders}/>
-        <FilterForm />
+        <FilterForm 
+        handleSubmit={this.handleSubmit}/>
         <FoldersOrFiles
+        filter={filter}
         columnReverse={columnReverse}
         sortValue={sortValue} 
         folderItemElement={folderItemElement}
@@ -36,6 +39,12 @@ class App extends Component {
     this.setState({
       folderItemElement: index,
       toggleInformation: toggle
+    })
+  }
+
+  handleSubmit = filter => {
+    this.setState({
+      filter
     })
   }
 
