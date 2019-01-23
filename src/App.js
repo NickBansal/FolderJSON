@@ -38,7 +38,8 @@ class App extends Component {
     const toggle = index !== folderItemElement  ? true : !toggleInformation
     this.setState({
       folderItemElement: index,
-      toggleInformation: toggle
+      toggleInformation: toggle,
+
     })
   }
 
@@ -49,11 +50,13 @@ class App extends Component {
   }
 
   sortFolders = value => {
-    const { sortValue, columnReverse } = this.state
+    const { sortValue, columnReverse, toggleInformation } = this.state
     const newReverse = value !== sortValue ? false : !columnReverse
+    const newToggle = toggleInformation ? toggleInformation : !toggleInformation
     this.setState({
       sortValue: value,
-      columnReverse: newReverse
+      columnReverse: newReverse,
+      toggleInformation: newToggle
     })
   }
 

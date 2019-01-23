@@ -4,7 +4,7 @@ import '../Stylesheets/Files.css'
 const Files = ({ AllFiles }) => {
     return (
         <div>
-            {AllFiles.map(file => {
+            {AllFiles && AllFiles.map(file => {
                 return (
                     <div key={file.name}>
                         <div className='File'>

@@ -9,8 +9,8 @@ import { nameSort, dateSort, sizeSort } from '../utils'
 
 const FoldersOrFiles = ({ handleClick, folderItemElement, toggleInformation, sortValue, columnReverse, filter }) => {
 
-    const filteredData = filter.length < 1 ? FoldersData : 
-    FoldersData.filter(item => new RegExp(filter.toLowerCase()).test(item.name.toLowerCase()))
+    const filteredData = !filter ? FoldersData : 
+    FoldersData.filter(item => RegExp(filter.toLowerCase().trim()).test(item.name.toLowerCase().trim()))
 
     const folderSort = !sortValue ? filteredData :
         sortValue === 'added' ? filteredData.sort(dateSort) :
