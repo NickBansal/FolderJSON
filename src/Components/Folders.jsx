@@ -40,7 +40,7 @@ const FoldersOrFiles = ({ handleClick, folderItemElement, toggleInformation, sor
                                 <img
                                     src={imageSource}
                                     alt={folder.type} />
-                                <p>{folder.size}Mb</p>
+                                <p>{folder.size}mb</p>
                             </div>
                             <div className='Folders__information'>
                                 <p className='Folders__name'>{folder.name}</p>

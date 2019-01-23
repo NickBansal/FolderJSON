@@ -53,7 +53,8 @@ class App extends Component {
     const newReverse = value !== sortValue ? false : !columnReverse
     this.setState({
       sortValue: value,
-      columnReverse: newReverse
+      columnReverse: newReverse,
+      toggleInformation: false
     })
   }
 

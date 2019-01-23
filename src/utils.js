@@ -9,5 +9,3 @@ export const dateSort = (a, b) => {
 }
 
 export const sizeSort = (a, b) => a.size - b.size
-
-
