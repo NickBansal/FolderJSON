@@ -37,7 +37,7 @@ const Folders = ({ handleClick, folderItemElement, toggleInformation }) => {
                         </div>
                         {
                             folderItemElement === index && toggleInformation &&
-                            <Files />
+                            <Files AllFiles={folder.files}/>
                         }
                     </div>
                 )

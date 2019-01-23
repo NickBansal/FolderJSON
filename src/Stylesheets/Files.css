@@ -1,0 +1,9 @@
+.File {
+    display: flex;
+    margin: 0 15px;
+}
+
+.File:hover {
+    background: lightblue;
+    cursor: pointer;
+}

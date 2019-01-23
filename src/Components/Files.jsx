@@ -1,9 +1,18 @@
 import React from 'react'
+import '../Stylesheets/Files.css'
 
-const Files = () => {
+const Files = ({ AllFiles }) => {
     return (
         <div>
-            <h1>Files</h1>
+            {AllFiles.map(file => {
+                return (
+                    <div key={file.name} className='File'>
+                        <p>{file.type}</p>
+                        <p>{file.name}</p>
+                        <p>{file.added}</p>
+                    </div>
+                )
+            })}
         </div>
     )
 }
