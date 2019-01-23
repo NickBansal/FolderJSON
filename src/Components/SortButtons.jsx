@@ -1,7 +1,7 @@
 import React from 'react'
 import '../Stylesheets/Buttons.css'
 
-const buttonNames = ['name', 'added']
+const buttonNames = ['name', 'added', 'size']
 
 const SortButtons = ({ sortFolders }) => {
     return (

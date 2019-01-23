@@ -11,11 +11,16 @@
     font-size: 20px;
     border: 2px solid black;
     border-radius: 10px;
+    box-shadow: 2px 2px 3px black
 }
 
 .Buttons__individual:hover {
     cursor: pointer;
     background: lightcyan
+}
+
+.Buttons__individual:active {
+    box-shadow: inset 2px 2px 3px black
 }
 
 .Buttons__individual:focus {
