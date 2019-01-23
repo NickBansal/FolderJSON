@@ -45,4 +45,5 @@ export default [
                 added: '2015-04-24'
             }
         ]
-    }]
+    }
+]

@@ -8,7 +8,8 @@ class App extends Component {
   state = {
     element: 0,
     toggleInformation: false,
-    sortValue: ''
+    sortValue: '',
+    coloumnReverse: false
   }
 
   render() {
@@ -36,8 +37,11 @@ class App extends Component {
   }
 
   sortFolders = value => {
+    const { sortValue, coloumnReverse } = this.state
+    const newReverse = value !== sortValue ? false : !coloumnReverse
     this.setState({
-      sortValue: value
+      sortValue: value,
+      coloumnReverse: newReverse
     })
   }
 
