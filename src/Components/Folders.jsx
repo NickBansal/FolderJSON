@@ -14,7 +14,7 @@ const Folders = () => {
                 folder.type === 'csv' ? csv : fileFolder 
 
                 const folderDate = folder.added ? <p className='Folders__added'>{folder.added}</p> : 
-                <i className="fas fa-chevron-right"></i>
+                <i className="fas fa-chevron-right fa-2x"></i>
 
                 const newClassName = folder.added ? 'Folders__information' : 'Folders__toggle'
 
