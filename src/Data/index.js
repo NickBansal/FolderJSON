@@ -33,7 +33,8 @@ export default [
     {
         type: 'csv',
         name: 'Cost centres',
-        added: '2016-08-12'
+        added: '2016-08-12',
+        size: 286
     },
     {
         type: 'folder',

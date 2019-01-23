@@ -5,12 +5,13 @@ import pdf from '../Stylesheets/Images/adobe.png'
 import csv from '../Stylesheets/Images/csv.png'
 import fileFolder from '../Stylesheets/Images/folder.png'
 import Files from '../Components/Files'
-import { nameSort, dateSort } from '../utils'
+import { nameSort, dateSort, sizeSort } from '../utils'
 
 const FoldersOrFiles = ({ handleClick, folderItemElement, toggleInformation, sortValue, columnReverse }) => {
 
     const folderSort = !sortValue ? FoldersData :
-    sortValue === 'name' ? FoldersData.sort(nameSort) : FoldersData.sort(dateSort)
+    sortValue === 'added' ? FoldersData.sort(dateSort) : 
+    sortValue === 'name' ? FoldersData.sort(nameSort) : FoldersData.sort(sizeSort)
 
     const columnOrder = !columnReverse ? 'column' : 'column-reverse'
 
@@ -37,12 +38,15 @@ const FoldersOrFiles = ({ handleClick, folderItemElement, toggleInformation, sor
                         className='Folders__files'
                         key={folder.name}>
                         <div className='Folders__item' >
+                        <div className='Folders__image'>
                             <img
-                                className='Folders__image'
                                 src={imageSource}
                                 alt={folder.type} />
+                            <p>{folder.size}mb</p>
+                        </div>
                             <div className={newClassName}>
                                 <p className='Folders__name'>{folder.name}</p>
+                        
                                 {folderInformation}
                             </div>
                         </div>
