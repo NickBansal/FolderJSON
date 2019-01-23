@@ -9,8 +9,8 @@ import { nameSort, dateSort, sizeSort } from '../utils'
 
 const FoldersOrFiles = ({ handleClick, folderItemElement, toggleInformation, sortValue, columnReverse, filter }) => {
 
-    const filteredData = !filter ? FoldersData : 
-    FoldersData.filter(item => RegExp(filter.toLowerCase().trim()).test(item.name.toLowerCase().trim()))
+    const filteredData = !filter ? FoldersData :
+        FoldersData.filter(item => RegExp(filter.toLowerCase().trim()).test(item.name.toLowerCase().trim()))
 
     const folderSort = !sortValue ? filteredData :
         sortValue === 'added' ? filteredData.sort(dateSort) :
@@ -40,7 +40,7 @@ const FoldersOrFiles = ({ handleClick, folderItemElement, toggleInformation, sor
                                 <img
                                     src={imageSource}
                                     alt={folder.type} />
-                                <p>{folder.size}mb</p>
+                                <p>{folder.size}Mb</p>
                             </div>
                             <div className='Folders__information'>
                                 <p className='Folders__name'>{folder.name}</p>
