@@ -12,8 +12,12 @@ const FoldersOrFiles = ({ handleClick, folderItemElement, toggleInformation, sor
     const folderSort = !sortValue ? FoldersData :
     sortValue === 'name' ? FoldersData.sort(nameSort) : FoldersData.sort(dateSort)
 
+    const style = coloumnReverse ? { flexDirection: 'column' } : { flexDirection: 'column-reverse' }
+
     return (
-        <div className='Folders'>
+        <div 
+        style={style}
+        className='Folders'>
             {folderSort.map((folder, index) => {
 
                 const arrow = toggleInformation && folderItemElement === index ? 'down' : 'right'

@@ -13,12 +13,13 @@ class App extends Component {
   }
 
   render() {
-    const { folderItemElement, toggleInformation, sortValue } = this.state
+    const { folderItemElement, toggleInformation, sortValue, coloumnReverse } = this.state
     return (
       <div className="App">
         <SortButtons 
         sortFolders={this.sortFolders}/>
         <FoldersOrFiles
+        coloumnReverse={coloumnReverse}
         sortValue={sortValue} 
         folderItemElement={folderItemElement}
         toggleInformation={toggleInformation}
