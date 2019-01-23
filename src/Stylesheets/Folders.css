@@ -1,0 +1,33 @@
+.Folders {
+    width: 40%;
+    margin: 50px
+}
+
+.Folders__item {
+    box-shadow: 5px 5px 15px;
+    height: 100px;
+    display: flex;
+    margin: 10px
+}
+
+.Folders__image {
+    height: 100px; 
+    width: 100px
+}
+
+.Folders__information {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 20px
+}
+
+.Folders__name {
+    margin: 0;
+    font-size: 19px
+}
+
+.Folders__added {
+    font-size: 12px
+}
