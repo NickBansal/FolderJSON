@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.css'
 import FoldersOrFiles from './Components/Folders'
 import SortButtons from './Components/SortButtons'
+import FilterForm from './Components/FilterForm'
 
 class App extends Component {
 
@@ -18,6 +19,7 @@ class App extends Component {
       <div className="App">
         <SortButtons 
         sortFolders={this.sortFolders}/>
+        <FilterForm />
         <FoldersOrFiles
         columnReverse={columnReverse}
         sortValue={sortValue} 
