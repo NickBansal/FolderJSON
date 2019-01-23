@@ -1,5 +1,4 @@
 .Folders {
-    width: 40%;
     margin: 50px
 }
 
@@ -7,7 +6,8 @@
     box-shadow: 5px 5px 15px;
     height: 100px;
     display: flex;
-    margin: 10px
+    margin: 10px;
+    max-width: 400px;
 }
 
 .Folders__image {
@@ -48,5 +48,6 @@
 }
 
 .fa-2x {
-    margin: 30px
+    margin: 30px;
+    font-size: 25px;
 }
