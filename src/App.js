@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
+import Folders from './Components/Folders'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Folder Select</h1>
+        <Folders />
       </div>
     );
   }
