@@ -1,19 +1,24 @@
-import React, { Component } from 'react';
-import './App.css';
-import Folders from './Components/Folders'
+import React, { Component } from 'react'
+import './App.css'
+import FoldersOrFiles from './Components/Folders'
+import SortButtons from './Components/SortButtons'
 
 class App extends Component {
 
   state = {
     element: 0,
-    toggleInformation: false
+    toggleInformation: false,
+    sortValue: ''
   }
 
   render() {
-    const { folderItemElement, toggleInformation } = this.state
+    const { folderItemElement, toggleInformation, sortValue } = this.state
     return (
       <div className="App">
-        <Folders 
+        <SortButtons 
+        sortFolders={this.sortFolders}/>
+        <FoldersOrFiles
+        sortValue={sortValue} 
         folderItemElement={folderItemElement}
         toggleInformation={toggleInformation}
         handleClick={this.handleClick}/>
@@ -27,6 +32,12 @@ class App extends Component {
     this.setState({
       folderItemElement: index,
       toggleInformation: toggle
+    })
+  }
+
+  sortFolders = value => {
+    this.setState({
+      sortValue: value
     })
   }
 

@@ -1,13 +1,9 @@
-.Folders {
-    margin: 50px
-}
-
 .Folders__item {
     box-shadow: 5px 5px 15px;
     height: 100px;
     display: flex;
     margin: 10px;
-    max-width: 400px;
+    width: 350px;
 }
 
 .Folders__image {
@@ -50,7 +46,7 @@
 .fa-2x {
     font-size: 25px;
     height: 100px;
-    width: 100px;
+    width: 70px;
     display: flex;
     justify-content: center;
     align-items: center;

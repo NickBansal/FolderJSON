@@ -1,0 +1,23 @@
+.Buttons {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    margin: 20px
+}
+
+.Buttons__individual {
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.Buttons__individual:hover {
+    cursor: pointer;
+    background: lightcyan
+}
+
+.Buttons__individual:focus {
+    outline: none
+} 

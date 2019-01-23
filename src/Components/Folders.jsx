@@ -5,16 +5,21 @@ import pdf from '../Stylesheets/Images/adobe.png'
 import csv from '../Stylesheets/Images/csv.png'
 import fileFolder from '../Stylesheets/Images/folder.png'
 import Files from '../Components/Files'
+import { nameSort, dateSort } from '../utils'
 
-const Folders = ({ handleClick, folderItemElement, toggleInformation }) => {
+const FoldersOrFiles = ({ handleClick, folderItemElement, toggleInformation, sortValue }) => {
+
+    const folderSort = !sortValue ? FoldersData :
+    sortValue === 'name' ? FoldersData.sort(nameSort) : FoldersData.sort(dateSort)
+
     return (
         <div className='Folders'>
-            {FoldersData.map((folder, index) => {
+            {folderSort.map((folder, index) => {
 
                 const arrow = toggleInformation && folderItemElement === index ? 'down' : 'right'
 
-                const imageSource = folder.type === 'pdf' ? pdf :
-                    folder.type === 'csv' ? csv : fileFolder
+                const imageSource = folder.type === 'pdf' ? pdf : 
+                folder.type === 'csv' ? csv : fileFolder
 
                 const folderInformation = folder.added ? <p className='Folders__added'>{folder.added}</p> :
                     <i onClick={() => handleClick(index)} className={`fas fa-chevron-${arrow} fa-2x`}></i>
@@ -46,4 +51,4 @@ const Folders = ({ handleClick, folderItemElement, toggleInformation }) => {
     )
 }
 
-export default Folders
+export default FoldersOrFiles
