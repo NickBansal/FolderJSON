@@ -9,17 +9,17 @@ class App extends Component {
     element: 0,
     toggleInformation: false,
     sortValue: '',
-    coloumnReverse: false
+    columnReverse: false
   }
 
   render() {
-    const { folderItemElement, toggleInformation, sortValue, coloumnReverse } = this.state
+    const { folderItemElement, toggleInformation, sortValue, columnReverse } = this.state
     return (
       <div className="App">
         <SortButtons 
         sortFolders={this.sortFolders}/>
         <FoldersOrFiles
-        coloumnReverse={coloumnReverse}
+        columnReverse={columnReverse}
         sortValue={sortValue} 
         folderItemElement={folderItemElement}
         toggleInformation={toggleInformation}
@@ -38,11 +38,11 @@ class App extends Component {
   }
 
   sortFolders = value => {
-    const { sortValue, coloumnReverse } = this.state
-    const newReverse = value !== sortValue ? false : !coloumnReverse
+    const { sortValue, columnReverse } = this.state
+    const newReverse = value !== sortValue ? false : !columnReverse
     this.setState({
       sortValue: value,
-      coloumnReverse: newReverse
+      columnReverse: newReverse
     })
   }
 

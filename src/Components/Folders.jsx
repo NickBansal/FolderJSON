@@ -7,12 +7,12 @@ import fileFolder from '../Stylesheets/Images/folder.png'
 import Files from '../Components/Files'
 import { nameSort, dateSort } from '../utils'
 
-const FoldersOrFiles = ({ handleClick, folderItemElement, toggleInformation, sortValue }) => {
+const FoldersOrFiles = ({ handleClick, folderItemElement, toggleInformation, sortValue, columnReverse }) => {
 
     const folderSort = !sortValue ? FoldersData :
     sortValue === 'name' ? FoldersData.sort(nameSort) : FoldersData.sort(dateSort)
 
-    const style = coloumnReverse ? { flexDirection: 'column' } : { flexDirection: 'column-reverse' }
+    const style = !columnReverse ? { flexDirection: 'column' } : { flexDirection: 'column-reverse' }
 
     return (
         <div 
