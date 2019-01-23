@@ -15,6 +15,7 @@ export default [
         type: 'folder',
         name: 'Expenses',
         size: 900,
+        added: '2017-05-02',
         files: [
             {
                 type: 'doc',
@@ -40,6 +41,7 @@ export default [
         type: 'folder',
         name: 'Misc',
         size: 859,
+        added: '2015-04-24',
         files: [
             {
                 type: 'doc',
