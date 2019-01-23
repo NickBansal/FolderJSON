@@ -11,7 +11,7 @@ const Folders = ({ handleClick, folderItemElement, toggleInformation }) => {
         <div className='Folders'>
             {FoldersData.map((folder, index) => {
 
-                const arrow = !toggleInformation ? 'right' : 'down'
+                const arrow = toggleInformation && folderItemElement === index ? 'down' : 'right'
 
                 const imageSource = folder.type === 'pdf' ? pdf :
                     folder.type === 'csv' ? csv : fileFolder

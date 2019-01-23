@@ -1,9 +1,15 @@
 .File {
     display: flex;
     margin: 0 15px;
+    justify-content: space-between
 }
 
 .File:hover {
     background: lightblue;
     cursor: pointer;
+}
+
+hr {
+    margin: 0 auto;
+    width: 90%
 }

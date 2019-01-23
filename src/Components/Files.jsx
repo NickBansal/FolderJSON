@@ -6,10 +6,12 @@ const Files = ({ AllFiles }) => {
         <div>
             {AllFiles.map(file => {
                 return (
-                    <div key={file.name} className='File'>
-                        <p>{file.type}</p>
-                        <p>{file.name}</p>
-                        <p>{file.added}</p>
+                    <div key={file.name} >
+                        <div className='File'>
+                            <p>{file.name} - {file.type}</p>
+                            <p>{file.added}</p>
+                        </div>
+                        <hr />
                     </div>
                 )
             })}

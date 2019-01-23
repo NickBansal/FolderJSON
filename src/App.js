@@ -22,11 +22,11 @@ class App extends Component {
   }
 
   handleClick = index => {
-    const { toggleInformation } = this.state
-    // const toggle = index !== folderItemElement ? true : !toggleInformation
+    const { toggleInformation, folderItemElement } = this.state
+    const toggle = index !== folderItemElement  ? true : !toggleInformation
     this.setState({
       folderItemElement: index,
-      toggleInformation: !toggleInformation
+      toggleInformation: toggle
     })
   }
 
