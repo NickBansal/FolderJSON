@@ -28,10 +28,10 @@ const FoldersOrFiles = ({ handleClick, folderItemElement, toggleInformation, sor
                 const imageSource = folder.type === 'pdf' ? pdf : 
                 folder.type === 'csv' ? csv : fileFolder
 
-                const folderInformation = folder.added ? <p className='Folders__added'>{folder.added}</p> :
-                    <i onClick={() => handleClick(index)} className={`fas fa-chevron-${arrow} fa-2x`}></i>
+                // const folderInformation = folder.added ? <p className='Folders__added'>{folder.added}</p> :
+                //     <i onClick={() => handleClick(index)} className={`fas fa-chevron-${arrow} fa-2x`}></i>
 
-                const newClassName = folder.added ? 'Folders__information' : 'Folders__toggle'
+                // const newClassName = folder.added ? 'Folders__information' : 'Folders__toggle'
 
                 return (
                     <div
@@ -44,11 +44,11 @@ const FoldersOrFiles = ({ handleClick, folderItemElement, toggleInformation, sor
                                 alt={folder.type} />
                             <p>{folder.size}mb</p>
                         </div>
-                            <div className={newClassName}>
+                            <div className='Folders__information'>
                                 <p className='Folders__name'>{folder.name}</p>
-                        
-                                {folderInformation}
+                                <p className='Folders__added'>{folder.added}</p>
                             </div>
+                                {folder.type === 'folder' && <i onClick={() => handleClick(index)} className={`fas fa-chevron-${arrow} fa-2x`}></i>}
                         </div>
                         {
                             folderItemElement === index && toggleInformation &&

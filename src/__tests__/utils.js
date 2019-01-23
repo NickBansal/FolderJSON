@@ -27,10 +27,18 @@ describe('Testing all the utils functions', () => {
         const data3Answer =  [{ added: '2017-05-10'}, { added: '2017-05-06'},  { added: '2017-05-02' }]
         expect(data3.sort(dateSort)).toEqual(data3Answer)
     })
-    it('Sorting arrays by the date', () => {
+    it('Sorting arrays by the file size', () => {
         const data1 = [{size: 1}, {size: 4}, { size: 3}, {size: 2}]
         const data1Answer = [{size: 1}, {size: 2}, { size: 3}, {size: 4}]
-        expect(data1.sort(dateSort)).toEqual(data1Answer)
+        expect(data1.sort(sizeSort)).toEqual(data1Answer)
+
+        const data2 = [{size: 10}, {size: 220}, { size: 3398}, {size: 2}]
+        const data2Answer = [{size: 2}, {size: 10}, { size: 220}, {size: 3398}]
+        expect(data2.sort(sizeSort)).toEqual(data2Answer)
+
+        const data3 = [{size: 10}, {size: 10}, { size: 8}, {size: 9}]
+        const data3Answer = [{size: 8}, {size: 9}, { size: 10}, {size: 10}]
+        expect(data3.sort(sizeSort)).toEqual(data3Answer)
     })
 
 })
