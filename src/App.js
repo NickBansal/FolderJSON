@@ -5,7 +5,7 @@ import Folders from './Components/Folders'
 class App extends Component {
 
   state = {
-    folderItemElement: 0,
+    element: 0,
     toggleInformation: false
   }
 
@@ -22,9 +22,11 @@ class App extends Component {
   }
 
   handleClick = index => {
+    const { toggleInformation } = this.state
+    // const toggle = index !== folderItemElement ? true : !toggleInformation
     this.setState({
       folderItemElement: index,
-      toggleInformation: !this.state.toggleInformation
+      toggleInformation: !toggleInformation
     })
   }
 
