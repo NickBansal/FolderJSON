@@ -12,7 +12,7 @@
 
 .Folders__image {
     height: 100px; 
-    width: 100px
+    width: 30%
 }
 
 .Folders__information {
@@ -20,7 +20,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-left: 20px
+    margin-left: 20px;
+    width: 70%
+}
+
+.Folders__toggle {
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 20px;
+    width: 70%
 }
 
 .Folders__name {
@@ -30,4 +40,9 @@
 
 .Folders__added {
     font-size: 12px
+}
+
+.Folders__item:hover {
+    cursor: pointer;
+    background: lightgrey
 }
