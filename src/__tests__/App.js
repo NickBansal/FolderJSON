@@ -2,7 +2,7 @@ import '../setupTest'
 import React from 'react'
 import App from '../App'
 import SortButton from '../Components/SortButtons'
-import FilterForm from '../Components/FilterForm'
+// import FilterForm from '../Components/FilterForm'
 import FoldersOrFiles from '../Components/Folders'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
@@ -13,12 +13,13 @@ describe('<App />', () => {
         const wrapper = shallow(<App />)
         expect(toJson(wrapper)).toMatchSnapshot()
     })
+
     it('Changes the folderItemElement and toggleInformation in state on click handler', () => {
         const wrapper = shallow(<App />)
         const props = {
-            filter: wrapper.state().filter,
-            columnReverse: wrapper.state().columnReverse,
-            sortValue: wrapper.state().sortValue,
+            filter: '',
+            columnReverse: null,
+            sortValue: null,
             folderItemElement: wrapper.state().folderItemElement,
             toggleInformation: wrapper.state().toggleInformation,
             handleClick: index => {
@@ -43,6 +44,7 @@ describe('<App />', () => {
         expect(wrapper.state().folderItemElement).toBe(4)
         expect(wrapper.state().toggleInformation).toBe(false)
     })
+
     it('Changes the state with the handleSubmit instance', () => {
         const wrapper = shallow(<App />)
         // const props = { handleSubmit: filter => {
