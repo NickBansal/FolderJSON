@@ -7,7 +7,7 @@ import FilterForm from './Components/FilterForm'
 class App extends Component {
 
   state = {
-    element: 0,
+    folderItemElement: 0,
     toggleInformation: false,
     sortValue: '',
     columnReverse: false,

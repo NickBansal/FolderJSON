@@ -13,6 +13,7 @@ exports[`<App /> Component matches the snapshot 1`] = `
   <FoldersOrFiles
     columnReverse={false}
     filter=""
+    folderItemElement={0}
     handleClick={[Function]}
     sortValue=""
     toggleInformation={false}
