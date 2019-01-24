@@ -4,9 +4,9 @@ import '../Stylesheets/FilterForm.css'
 const FilterForm = ({ handleSubmit }) => {
     return (
         <div>
-            <form onSubmit={(e) => {
+            <form onChange={(e) => {
                 e.preventDefault()
-                handleSubmit(e.target[0].value)}}>
+                handleSubmit(e.target.value)}}>
                 <input type='text' placeholder='Filter...' />
             </form>
         </div>
