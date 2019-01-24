@@ -1,6 +1,7 @@
 import '../setupTest'
 import React from 'react'
 import App from '../App'
+import SortButton from '../Components/SortButtons'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
@@ -30,12 +31,24 @@ describe('<App />', () => {
         wrapper.instance().handleSubmit('random')
         expect(wrapper.state().filter).toBe('random')
     })
-    it('Changes the state with the sortFolder instance', () => {
-        wrapper.instance().sortFolders('name')
+    it.only('Changes the state with the sortFolder instance', () => {
+        const props = { sortFolders: value => {
+            wrapper.setState({
+                sortValue: value,
+                toggleInformation: false
+            })
+        }};
+        const buttonWrapper = shallow(<SortButton {...props}/>)
+
+        buttonWrapper.find('button').first().simulate('click');
         expect(wrapper.state().sortValue).toBe('name')
         expect(wrapper.state().toggleInformation).toBe(false)
-        expect(wrapper.state().columnReverse).toBe(false)
-        wrapper.instance().sortFolders('name')
-        expect(wrapper.state().columnReverse).toBe(true)
+
+        buttonWrapper.find('button').at(1).simulate('click');
+        expect(wrapper.state().sortValue).toBe('added')
+
+        buttonWrapper.find('button').last().simulate('click');
+        expect(wrapper.state().sortValue).toBe('size')
+      
     })
 })
