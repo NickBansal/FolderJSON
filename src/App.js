@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     const { folderItemElement, toggleInformation, sortValue, columnReverse, filter } = this.state
     return (
-      <div className="App">
+      <div className='App'>
         <SortButtons 
         sortFolders={this.sortFolders}/>
         <FilterForm 
@@ -30,7 +30,7 @@ class App extends Component {
         toggleInformation={toggleInformation}
         handleClick={this.handleClick}/>
       </div>
-    );
+    )
   }
 
   handleClick = index => {
@@ -60,4 +60,4 @@ class App extends Component {
 
 }
 
-export default App;
+export default App
