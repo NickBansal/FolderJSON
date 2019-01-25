@@ -8,7 +8,7 @@ exports[`<App /> Component matches the snapshot 1`] = `
     sortFolders={[Function]}
   />
   <FilterForm
-    handleSubmit={[Function]}
+    handleChange={[Function]}
   />
   <FoldersOrFiles
     columnReverse={false}

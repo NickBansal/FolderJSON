@@ -21,7 +21,7 @@ class App extends Component {
         <SortButtons 
         sortFolders={this.sortFolders}/>
         <FilterForm 
-        handleSubmit={this.handleSubmit}/>
+        handleChange={this.handleChange}/>
         <FoldersOrFiles
         filter={filter}
         columnReverse={columnReverse}
@@ -42,7 +42,7 @@ class App extends Component {
     })
   }
 
-  handleSubmit = filter => {
+  handleChange = filter => {
     this.setState({
       filter
     })

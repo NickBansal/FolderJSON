@@ -2,7 +2,7 @@ import '../setupTest'
 import React from 'react'
 import App from '../App'
 import SortButton from '../Components/SortButtons'
-// import FilterForm from '../Components/FilterForm'
+import FilterForm from '../Components/FilterForm'
 import FoldersOrFiles from '../Components/Folders'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
@@ -47,18 +47,16 @@ describe('<App />', () => {
 
     it('Changes the state with the handleSubmit instance', () => {
         const wrapper = shallow(<App />)
-        // const props = { handleSubmit: filter => {
-        //     wrapper.setState({
-        //         filter
-        //     })
-        // }};
-        // const filterWrapper = shallow(<FilterForm {...props}/>)
-        // filterWrapper.find('input').simulate('change', { target: { value: 'Hello' }})
-
-        wrapper.instance().handleSubmit('filter')
-        expect(wrapper.state().filter).toBe('filter')
-        wrapper.instance().handleSubmit('random')
-        expect(wrapper.state().filter).toBe('random')
+        const props = { handleChange: filter => {
+            wrapper.setState({
+                filter
+            })
+        }};
+        const filterWrapper = shallow(<FilterForm {...props}/>)
+        filterWrapper.find('form').simulate('change', { target: { value: 'Hello' }})
+        expect(wrapper.state().filter).toBe('Hello')
+        filterWrapper.find('form').simulate('change', { target: { value: 'ABC' }})
+        expect(wrapper.state().filter).toBe('ABC')
     })
 
     it('Changes the state with the sortFolder instance', () => {
