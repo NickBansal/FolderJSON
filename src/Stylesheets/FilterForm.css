@@ -1,4 +1,4 @@
-input[type=text] {
+input[type="text"] {
     width: 350px;
     box-sizing: border-box;
     border: 2px solid black;
@@ -6,9 +6,9 @@ input[type=text] {
     font-size: 20px;
     padding: 5px 10px;
     float: right;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
-input[type=text]:focus {
-    outline: none
+input[type="text"]:focus {
+    outline: none;
 }

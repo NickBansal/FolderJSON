@@ -1,5 +1,5 @@
 .Folders {
-    display: flex
+    display: flex;
 }
 
 .Folders__item {
@@ -8,49 +8,49 @@
     display: flex;
     margin: 10px;
     width: 350px;
-    position: relative
+    position: relative;
 }
 
 .Folders__image {
-    height: 100px; 
+    height: 100px;
     width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 
 .Folders__image img {
-    height: 65px; 
-    width: 65px
+    height: 65px;
+    width: 65px;
 }
 
 .Folders__image p {
     margin: 0;
-    font-size: 12px
+    font-size: 12px;
 }
 
 .Folders__information {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     margin-left: 20px;
-    width: 70%
+    width: 70%;
 }
 
 .Folders__name {
     margin: 0;
-    font-size: 19px
+    font-size: 19px;
 }
 
 .Folders__added {
-    font-size: 12px
+    font-size: 12px;
 }
 
 .Folders__item:hover {
     cursor: pointer;
-    background: lightgrey
+    background: lightgrey;
 }
 
 .fa-2x {

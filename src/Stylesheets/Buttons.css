@@ -2,7 +2,7 @@
     display: flex;
     width: 350px;
     justify-content: space-between;
-    margin: 20px
+    margin: 20px;
 }
 
 .Buttons__individual {
@@ -11,18 +11,18 @@
     font-size: 20px;
     border: 2px solid black;
     border-radius: 10px;
-    box-shadow: 2px 2px 3px black
+    box-shadow: 2px 2px 3px black;
 }
 
 .Buttons__individual:hover {
     cursor: pointer;
-    background: lightcyan
+    background: lightcyan;
 }
 
 .Buttons__individual:active {
-    box-shadow: inset 2px 2px 3px black
+    box-shadow: inset 2px 2px 3px black;
 }
 
 .Buttons__individual:focus {
-    outline: none
-} 
+    outline: none;
+}
