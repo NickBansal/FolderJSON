@@ -53,9 +53,9 @@ describe('<App />', () => {
             })
         }};
         const filterWrapper = shallow(<FilterForm {...props}/>)
-        filterWrapper.find('form').simulate('change', { target: { value: 'Hello' }})
+        filterWrapper.find('input').simulate('change', { target: { value: 'Hello' }})
         expect(wrapper.state().filter).toBe('Hello')
-        filterWrapper.find('form').simulate('change', { target: { value: 'ABC' }})
+        filterWrapper.find('input').simulate('change', { target: { value: 'ABC' }})
         expect(wrapper.state().filter).toBe('ABC')
     })
 
