@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilterForm /> Should create a snapshot 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      onChange={[Function]}
+      placeholder="Filter..."
+      type="text"
+    />
+  </form>
+</div>
+`;

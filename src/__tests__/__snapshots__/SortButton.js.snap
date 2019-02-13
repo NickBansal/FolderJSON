@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SortButton /> Component matches the snapshot 1`] = `
+<div
+  className="Buttons"
+>
+  <div
+    key="0"
+  >
+    <button
+      className="Buttons__individual"
+      onClick={[Function]}
+    >
+      name
+    </button>
+  </div>
+  <div
+    key="1"
+  >
+    <button
+      className="Buttons__individual"
+      onClick={[Function]}
+    >
+      added
+    </button>
+  </div>
+  <div
+    key="2"
+  >
+    <button
+      className="Buttons__individual"
+      onClick={[Function]}
+    >
+      size
+    </button>
+  </div>
+</div>
+`;
